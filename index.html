@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <link rel="stylesheet" title="Standard" href="styles.css" type="text/css" media="screen" />
+
+    <script language="JavaScript" type="text/javascript" src="contentflow.js" load="hovermove"></script>
+    <script tyle="text/javascript">
+        var cf = new ContentFlow('contentFlow', {reflectionColor: "#000000"});
+    </script>
+</head>
+<body>
+
+    <h1 id="title"><img src="title.png"/></h1>
+    <h3 style="text-align: center; margin: 10px 0 30px 0; text-decoration: none;">version 1.0.2</h3>
+    
+    <div class="maincontent">
+
+
+    <!-- ===== FLOW ===== -->
+    <div id="contentFlow" class="ContentFlow" useAddOns="hovermove">
+        <!-- should be place before flow so that contained images will be loaded first -->
+        <div class="loadIndicator"><div class="indicator"></div></div>
+
+        <div class="flow">
+
+            <div class="item">
+                <img class="content" src="pics/pic0.png"/>
+                <div class="caption">pic0: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic1.png"/>
+                <div class="caption">pic1: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic2.png"/>
+                <div class="caption">pic2: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic1.png"/>
+                <div class="caption">pic1: some stripes</div>
+            </div>
+
+            <div class="item">
+                <img class="content" src="pics/pic0.png"/>
+                <div class="caption">pic0: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic1.png"/>
+                <div class="caption">pic1: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic2.png"/>
+                <div class="caption">pic2: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic1.png"/>
+                <div class="caption">pic1: some stripes</div>
+            </div>
+
+            <div class="item">
+                <img class="content" src="pics/pic0.png"/>
+                <div class="caption">pic0: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic1.png"/>
+                <div class="caption">pic1: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic2.png"/>
+                <div class="caption">pic2: some stripes</div>
+            </div>
+            <div class="item">
+                <img class="content" src="pics/pic1.png"/>
+                <div class="caption">pic1: some stripes</div>
+            </div>
+
+        </div>
+        <div class="globalCaption"></div>
+        <div class="scrollbar">
+            <div class="slider"><div class="position"></div></div>
+        </div>
+
+    </div>
+
+<br><br>
+<pre>
+<h3><a href="http://q.hatena.ne.jp/1306465261">jqueryのスライダーで http://www.jacksasylum.eu/ContentFlow/d.. - 人力検索はてな</a></h3>
+
+mouseoverすると動くContentFlow Addonを作ってみた。
+上がデモ。
+ContentFlowAddOn_hovermove.jsのafterContentFlowInitの部分だけ書いた。アドオンの作り方は公式ページを参照。
+動作する領域や間隔の調整はafterContentFlowInitの数字の部分を適当に変えてみてください。
+
+
+使い方は、
+1. ContentFlowAddOn_hovermove.jsを準備。
+2.	&lt;script language="JavaScript" type="text/javascript" src="contentflow.js" load="hovermove"&gt;&lt;/script&gt;
+	&lt;div id="contentFlow" class="ContentFlow" useAddOns="hovermove"&gt;
+	hovermoveアドオンを読み込むために必要な箇所を追記
+
+
+
+
+<h3><a href="http://www.jacksasylum.eu/ContentFlow/">オリジナルはこちら ContentFlow</a></h3>
+</pre>
+</body>
+</html>
