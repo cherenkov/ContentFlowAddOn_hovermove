@@ -22,7 +22,6 @@
  *
  */
 new ContentFlowAddOn ('hovermove', {
-
     /* 
      * AddOn configuration object, defining the default configuration values.
      */
