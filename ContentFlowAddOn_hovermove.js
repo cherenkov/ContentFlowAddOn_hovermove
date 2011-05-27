@@ -22,6 +22,7 @@
  *
  */
 new ContentFlowAddOn ('hovermove', {
+
     /* 
      * AddOn configuration object, defining the default configuration values.
      */
@@ -69,26 +70,23 @@ new ContentFlowAddOn ('hovermove', {
     afterContentFlowInit: function (flow) {
 		var onmouseObj;
 		var width;
-		flow.Container.onmouseover = function(e) {
-			clearInterval(onmouseObj);
-			onmouseObj = setInterval(function() {
-				width = flow.Container.getDimensions().width;
-				if (width * 0.4 > e.clientX) {
-					flow.moveTo('pre');
-				} else if (width * 0.6 < e.clientX) {
-					flow.moveTo('next');
-				}
-			}, 700);
+		var conf = flow.getAddOnConf('hovermove');
+		
+		var nextBtn = document.createElement('div');
+		//nextBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:50px; position:absolute; left:10%; bottom:5%;');
+		nextBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:60%; position:absolute; left:10%; top:5%;');
+		nextBtn.onmouseover = function () {
+			onmouseObj = setInterval(function(){ flow.moveTo('next') }, 400);
 		};
-		flow.Container.onmouseout = function() {
-			clearInterval(onmouseObj);
+		nextBtn.onmouseout = function () {
+			onmouseObj = clearInterval(onmouseObj);
 		};
+		flow.Container.appendChild(nextBtn);
 
 
-		/*
-		//レイヤー方式は下のサムネイルが押せないからボツ
 		var preBtn = document.createElement('div');
-		preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:25%; height:60%; position:absolute; left:10%; top:10%;');
+		preBtn.textContent = '→';
+		preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:50px; position:absolute; right:10%; bottom:5%; font-size:4em;');
 		preBtn.onmouseover = function () {
 			onmouseObj = setInterval(function(){ flow.moveTo('pre') }, 400);
 		};
@@ -97,17 +95,17 @@ new ContentFlowAddOn ('hovermove', {
 		};
 		flow.Container.appendChild(preBtn);
 
-		var nextBtn = document.createElement('div');
-		nextBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:25%; height:60%; position:absolute; right:10%; top:10%;');
-		nextBtn.onmouseover = function () {
-			onmouseObj = setInterval(function(){ flow.moveTo('next') }, 400);
+
+		var preBtn2 = document.createElement('img');
+		preBtn2.src = 'img/arrow_r.png';
+		preBtn2.setAttribute('style', 'width:50px; position:absolute; right:10%; top:5%; font-size:4em;');
+		preBtn2.onmouseover = function () {
+			onmouseObj = setInterval(function(){ flow.moveTo('pre') }, 400);
 		};
-		nextBtn.onmouseout = function () {
+		preBtn2.onmouseout = function () {
 			onmouseObj = clearInterval(onmouseObj);
 		};
-		flow.Container.appendChild(nextBtn);
-		*/
-
+		flow.Container.appendChild(preBtn2);
 
 
 
