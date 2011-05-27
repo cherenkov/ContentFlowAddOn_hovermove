@@ -87,7 +87,7 @@ new ContentFlowAddOn ('hovermove', {
 
 
 		/*
-		//ƒŒƒCƒ„[•û®‚Í‰º‚ÌƒTƒ€ƒlƒCƒ‹‚ª‰Ÿ‚¹‚È‚¢‚©‚çƒ{ƒc
+		//ãƒ¬ã‚¤ãƒ¤ãƒ¼æ–¹å¼ã¯ä¸‹ã®ã‚µãƒ ãƒã‚¤ãƒ«ãŒæŠ¼ã›ãªã„ã‹ã‚‰ãƒœãƒ„
 		var preBtn = document.createElement('div');
 		preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:25%; height:60%; position:absolute; left:10%; top:10%;');
 		preBtn.onmouseover = function () {
