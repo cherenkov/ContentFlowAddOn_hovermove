@@ -71,7 +71,7 @@ new ContentFlowAddOn ('hovermove', {
 		var onmouseObj;
 		var width;
 		var conf = flow.getAddOnConf('hovermove');
-		
+
 		var preBtn = document.createElement('div');
 		//preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:50px; position:absolute; left:10%; bottom:5%;');
 		preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:60%; position:absolute; left:10%; top:5%;');
