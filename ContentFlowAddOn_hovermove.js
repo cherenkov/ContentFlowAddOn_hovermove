@@ -72,21 +72,9 @@ new ContentFlowAddOn ('hovermove', {
 		var width;
 		var conf = flow.getAddOnConf('hovermove');
 		
-		var nextBtn = document.createElement('div');
-		//nextBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:50px; position:absolute; left:10%; bottom:5%;');
-		nextBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:60%; position:absolute; left:10%; top:5%;');
-		nextBtn.onmouseover = function () {
-			onmouseObj = setInterval(function(){ flow.moveTo('next') }, 400);
-		};
-		nextBtn.onmouseout = function () {
-			onmouseObj = clearInterval(onmouseObj);
-		};
-		flow.Container.appendChild(nextBtn);
-
-
 		var preBtn = document.createElement('div');
-		preBtn.textContent = '→';
-		preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:50px; position:absolute; right:10%; bottom:5%; font-size:4em;');
+		//preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:50px; position:absolute; left:10%; bottom:5%;');
+		preBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:60%; position:absolute; left:10%; top:5%;');
 		preBtn.onmouseover = function () {
 			onmouseObj = setInterval(function(){ flow.moveTo('pre') }, 400);
 		};
@@ -96,16 +84,28 @@ new ContentFlowAddOn ('hovermove', {
 		flow.Container.appendChild(preBtn);
 
 
-		var preBtn2 = document.createElement('img');
-		preBtn2.src = 'img/arrow_r.png';
-		preBtn2.setAttribute('style', 'width:50px; position:absolute; right:10%; top:5%; font-size:4em;');
-		preBtn2.onmouseover = function () {
-			onmouseObj = setInterval(function(){ flow.moveTo('pre') }, 400);
+		var nextBtn = document.createElement('div');
+		nextBtn.textContent = '→';
+		nextBtn.setAttribute('style', 'background-color:pink; opacity:0.5; width:50px; height:50px; position:absolute; right:10%; bottom:5%; font-size:4em;');
+		nextBtn.onmouseover = function () {
+			onmouseObj = setInterval(function(){ flow.moveTo('next') }, 400);
 		};
-		preBtn2.onmouseout = function () {
+		nextBtn.onmouseout = function () {
 			onmouseObj = clearInterval(onmouseObj);
 		};
-		flow.Container.appendChild(preBtn2);
+		flow.Container.appendChild(nextBtn);
+
+
+		var nextBtn2 = document.createElement('img');
+		nextBtn2.src = 'img/arrow_r.png';
+		nextBtn2.setAttribute('style', 'width:50px; position:absolute; right:10%; top:5%; font-size:4em;');
+		nextBtn2.onmouseover = function () {
+			onmouseObj = setInterval(function(){ flow.moveTo('next') }, 400);
+		};
+		nextBtn2.onmouseout = function () {
+			onmouseObj = clearInterval(onmouseObj);
+		};
+		flow.Container.appendChild(nextBtn2);
 
 
 
